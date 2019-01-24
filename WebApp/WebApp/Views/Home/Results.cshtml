@@ -1,11 +1,39 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model List<WebApp.Models.TimePerson>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Results</title>
     <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Hello results</h1>
-
-
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Honor</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Birth Year</th>
+            <th>Death Year</th>
+            <th>Title</th>
+            <th>Catagory</th>
+            <th>Context</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Year</td>
+                <td>@item.Honor</td>
+                <td>@item.Name</td>
+                <td>@item.Country</td>
+                <td>@item.BirthYear</td>
+                <td>@item.DeathYear</td>
+                <td>@item.Title</td>
+                <td>@item.Category</td>
+                <td>@item.Context</td>
+            </tr>
+        }
+    </table>
 </body>
 </html>
+

@@ -15,11 +15,13 @@ namespace WebApp.Controllers
         {
             return View();
         }
-
-        public IActionResult Results()
+        [HttpGet]
+        public IActionResult Results(int firstYear, int secondYear)
         {
-            return View();
+            
+            return View(TimePerson.GetPersons(firstYear, secondYear));
         }
+
         [HttpPost]
         public IActionResult Index(int firstYear, int secondYear)
         {
