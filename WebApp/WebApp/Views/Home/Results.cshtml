@@ -6,34 +6,41 @@
     <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Hello results</h1>
-    <table>
-        <tr>
-            <th>Year</th>
-            <th>Honor</th>
-            <th>Name</th>
-            <th>Country</th>
-            <th>Birth Year</th>
-            <th>Death Year</th>
-            <th>Title</th>
-            <th>Catagory</th>
-            <th>Context</th>
-        </tr>
-        @foreach (var item in Model)
-        {
+    <section>
+        <div>
+            <h1>TIME</h1>
+            <h1>Person of the Year</h1>
+            <form action="index"><button type="submit">Home</button></form>
+            
+        </div>
+        <table>
             <tr>
-                <td>@item.Year</td>
-                <td>@item.Honor</td>
-                <td>@item.Name</td>
-                <td>@item.Country</td>
-                <td>@item.BirthYear</td>
-                <td>@item.DeathYear</td>
-                <td>@item.Title</td>
-                <td>@item.Category</td>
-                <td>@item.Context</td>
+                <th>Year</th>
+                <th>Honor</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Birth Year</th>
+                <th>Death Year</th>
+                <th>Title</th>
+                <th>Catagory</th>
+                <th>Context</th>
             </tr>
-        }
-    </table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Year</td>
+                    <td>@item.Honor</td>
+                    <td>@item.Name</td>
+                    <td>@item.Country</td>
+                    <td>@item.BirthYear</td>
+                    <td>@item.DeathYear</td>
+                    <td>@item.Title</td>
+                    <td>@item.Category</td>
+                    <td>@item.Context</td>
+                </tr>
+            }
+        </table>
+    </section>
 </body>
 </html>
 
